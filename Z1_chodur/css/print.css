@@ -1,0 +1,79 @@
+/* ================================================================= */
+/* TLAČOVÉ ŠTÝLY (print.css)                                         */
+/* ================================================================= */
+
+@media print {
+    /* 1. Reset pozadia na čistú bielu a čierny text pre tlač */
+    body {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        font-family: 'Inter', Arial, sans-serif !important;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    /* 2. Skryť nepotrebné prvky rozhrania pri tlači */
+    .site-nav,
+    .site-header,
+    .site-footer,
+    .filter-buttons,
+    .map-controls,
+    .map-select-btn,
+    button,
+    nav {
+        display: none !important;
+    }
+
+    /* 3. Úprava hlavného obsahu, aby sa roztiahol na papier */
+    .main-content {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: none !important;
+    }
+
+    /* 4. Zrušenie tmavých pozadí kariet a tieňov, nahradenie čistým rámikom */
+    section,
+    .cv-grid,
+    .cv-sidebar,
+    .cv-main,
+    .profile-section,
+    .cv-section,
+    .workspace-section,
+    .schedule-section,
+    .map-section {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+        border: 1px solid #cccccc !important;
+        border-radius: 0 !important;
+        padding: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* 5. Zabezpečenie čitateľnosti tabuliek a textov */
+    .schedule-table th {
+        background-color: #dddddd !important;
+        color: #000000 !important;
+        border: 1px solid #000000 !important;
+    }
+
+    .schedule-table td {
+        border: 1px solid #cccccc !important;
+        color: #000000 !important;
+    }
+
+    /* Zvýraznená hodina pri tlači */
+    .current-lesson,
+    .schedule-table td.active-slot {
+        background-color: #eeeeee !important;
+        font-weight: bold !important;
+        border: 2px solid #000000 !important;
+    }
+
+    /* Odkazy – vypísať URL adresu za text, ak je to potrebné, alebo nechať čierne */
+    a {
+        text-decoration: none !important;
+        color: #000000 !important;
+    }
+}
