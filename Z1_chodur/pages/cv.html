@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Môj životopis — Miroslav Chodúr</title>
+    <meta name="description" content="Stručný životopis, vzdelanie a zručnosti študenta aplikovanej informatiky na FEI STU.">
+    <meta property="og:title" content="Môj životopis — Miroslav Chodúr">
+    <meta property="og:description" content="Prehľad môjho dosiahnutého vzdelania, pracovných skúseností a nadobudnutých zručností.">
+    <meta property="og:image" content="../img/me.jpg">
+    <link rel="icon" href="../docs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="monogram" aria-label="Monogram">MCH</div>
+        <div class="header-text">
+            <span class="author-name">Miroslav Chodúr</span>
+            <p class="slogan">študent aplikovanej informatiky, zaujímajú ma webové technológie</p>
+        </div>
+    </div>
+    <nav class="site-nav">
+        <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Profil</a></li>
+            <li><a href="cv.html" class="nav-link nav-link--active">Životopis</a></li>
+            <li><a href="workspace.html" class="nav-link">Pracovné prostredie</a></li>
+            <li><a href="schedule.html" class="nav-link">Kedy ma zastihnete</a></li>
+            <li><a href="map.html" class="nav-link">Kde ma nájdete</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section class="cv-section">
+        <h1>Môj životopis</h1>
+
+        <!-- Dvojstĺpcový layout s plnou výškou a výrazným odsadením pravého stĺpca -->
+        <div class="cv-grid" style="display: flex; align-items: stretch; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0;">
+
+            <!-- Ľavý stĺpec (Šedé pozadie) -->
+            <aside class="cv-sidebar" style="width: 260px; background-color: #f1f5f9; padding: 1.5rem; flex-shrink: 0; border-right: 1px solid #e2e8f0;">
+                <img src="../img/profile.jpg" alt="Fotografia Miroslav Chodúr" class="cv-photo" style="width: 100%; border-radius: 8px; display: block; margin-bottom: 1.5rem;">
+
+                <div class="cv-block">
+                    <h2>Kontakt</h2>
+                    <p style="margin-top: 0.5rem;"><em>Email:</em> <a href="mailto:xchodurm@stuba.sk">xchodurm@stuba.sk</a></p>
+                    <p><em>Tel:</em> <a href="tel:+421900123456">+421 900 123 456</a></p>
+                    <p><em>Škola:</em> FEI STU, Bratislava</p>
+                </div>
+            </aside>
+
+            <!-- Pravý stĺpec (Biele pozadie s pridaným odsadením padding-left: 2.5rem) -->
+            <div class="cv-main" style="flex: 1; background-color: #ffffff; padding: 2rem 2.5rem 2rem 3rem;">
+                <div class="cv-block" style="margin-bottom: 2rem;">
+                    <h2>Vzdelanie</h2>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem; margin-top: 0.75rem;">
+                        <li style="margin-bottom: 0.75rem;">
+                            <strong>2020 – 2024</strong><br>
+                            Gymnázium B. S. Timravy, Lučenec
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <strong>9/2024 – súčasnosť</strong><br>
+                            Fakulta informatiky a informačných technológií, Slovenská technická univerzita v Bratislave
+                        </li>
+                        <li style="margin-bottom: 0.75rem;">
+                            <strong>9/2025 – súčasnosť</strong><br>
+                            Fakulta elektrotechniky a informatiky, aplikovaná informatika, Slovenská technická univerzita v Bratislave
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cv-block">
+                    <h2>Zručnosti a kľúčové oblasti</h2>
+                    <ul style="list-style-type: disc; margin-left: 1.5rem; margin-top: 0.75rem;">
+                        <li style="margin-bottom: 0.4rem;">Python — <em>Začiatočník</em></li>
+                        <li style="margin-bottom: 0.4rem;">C — <em>Začiatočník</em></li>
+                        <li style="margin-bottom: 0.4rem;">Anglický jazyk — <em>Pokročilý</em></li>
+                        <li style="margin-bottom: 0.4rem;">Nemecký jazyk — <em>Začiatočník</em></li>
+                        <!--<li style="margin-bottom: 0.4rem;">Webové technológie (HTML5, CSS3) — <em>Pokročilý</em></li>
+                        <li style="margin-bottom: 0.4rem;">Programovanie a logika — <em>Mierne pokročilý</em></li>
+                        <li style="margin-bottom: 0.4rem;">Aktívny šport (futbal) — <em>Pokročilý</em></li>-->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <address class="footer-contact">
+        Kontakt: <a href="mailto:xchodurm@stuba.sk">xchodurm@stuba.sk</a> | Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+    </address>
+    <p>&copy; 2026 Miroslav Chodúr | <a href="../README.md">Zdroje a licencovanie</a></p>
+</footer>
+
+</body>
+</html>

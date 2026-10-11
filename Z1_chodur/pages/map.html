@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kde ma nájdete — Miroslav Chodúr</title>
+    <meta name="description" content="Interaktívna mapa znázorňujúca polohu školy FEI STU a moje bydlisko v Lučenci s možnosťou výpočtu vzdialenosti.">
+    <meta property="og:title" content="Kde ma nájdete — Miroslav Chodúr">
+    <meta property="og:description" content="Pozrite sa, odkiaľ dochádzam a pridajte vlastné body na mapu.">
+    <meta property="og:image" content="../img/me.jpg">
+    <link rel="icon" href="../docs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="monogram" aria-label="Monogram">MCH</div>
+        <div class="header-text">
+            <span class="author-name">Miroslav Chodúr</span>
+            <p class="slogan">študent aplikovanej informatiky, zaujímajú ma webové technológie</p>
+        </div>
+    </div>
+    <nav class="site-nav">
+        <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Profil</a></li>
+            <li><a href="cv.html" class="nav-link">Životopis</a></li>
+            <li><a href="workspace.html" class="nav-link">Pracovné prostredie</a></li>
+            <li><a href="schedule.html" class="nav-link">Kedy ma zastihnete</a></li>
+            <li><a href="map.html" class="nav-link nav-link--active">Kde ma nájdete</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section class="map-section">
+        <h1>Kde ma nájdete</h1>
+        <p>Mapa znázorňuje polohu fakulty (FEI STU v Bratislave) a moje bydlisko (Lučenec). Kliknutím do mapy môžete pridávať vlastné body.</p>
+
+        <!-- Prázdny stav / Inštrukcie -->
+        <div id="map-instructions" class="map-instructions">
+            Zatiaľ ste nepridali žiadne vlastné body. Kliknite kdekoľvek do mapy, čím vytvoríte nový bod, alebo vyberte existujúci bod zo zoznamu nižšie.
+        </div>
+
+        <div id="map" class="map-container" style="height: 450px; width: 100%;"></div>
+
+        <!-- Zoznam bodov na výber -->
+        <div class="map-points-list-container">
+            <h2>Zoznam bodov na mape</h2>
+            <ul id="map-points-list" class="map-points-list">
+                <!-- Dynamicky generované cez JS -->
+            </ul>
+        </div>
+
+        <div class="distance-panel">
+            <h2>Vzdialenosť miest</h2>
+            <p id="distance-result">Zatiaľ nie sú vybrané dva body na výpočet vzdialenosti cez Haversinov vzorec.</p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <address class="footer-contact">
+        Kontakt: <a href="mailto:xchodurm@stuba.sk">xchodurm@stuba.sk</a> | Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+    </address>
+    <p>
+        &copy; 2026 Miroslav Chodúr |
+        Mapové podklady: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> |
+        Mapová knižnica: <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> |
+        <a href="../README.md">Zdroje a licencovanie</a>
+    </p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

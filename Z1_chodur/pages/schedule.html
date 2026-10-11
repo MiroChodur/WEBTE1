@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozvrh — Miroslav Chodúr</title>
+    <meta name="description" content="Môj študijný rozvrh na FEI STU a aktuálna dostupnosť počas týždňa.">
+    <meta property="og:title" content="Rozvrh — Miroslav Chodúr">
+    <meta property="og:description" content="Zistite, kedy mám prednášky a cvičenia.">
+    <meta property="og:image" content="../img/me.jpg">
+    <link rel="icon" href="../docs/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-container">
+        <div class="monogram" aria-label="Monogram">MCH</div>
+        <div class="header-text">
+            <span class="author-name">Miroslav Chodúr</span>
+            <p class="slogan">študent aplikovanej informatiky, zaujímajú ma webové technológie</p>
+        </div>
+    </div>
+    <nav class="site-nav">
+        <ul class="nav-list">
+            <li><a href="../index.html" class="nav-link">Profil</a></li>
+            <li><a href="cv.html" class="nav-link">Životopis</a></li>
+            <li><a href="workspace.html" class="nav-link">Pracovné prostredie</a></li>
+            <li><a href="schedule.html" class="nav-link nav-link--active">Kedy ma zastihnete</a></li>
+            <li><a href="map.html" class="nav-link">Kde ma nájdete</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-content">
+    <section class="schedule-section">
+        <h1>Môj rozvrh hodín</h1>
+        <p>Prehľad výučby podľa rozvrhu hodín na FEI STU od 7:00 do 21:00. Prebiehajúca hodina je automaticky zvýraznená.</p>
+
+        <!-- Informačný box o prebiehajúcej / najbližšej hodine -->
+        <div id="current-lesson-status" class="current-lesson-status">
+            Načítavam aktuálny stav výučby...
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn filter-btn--active" data-filter="all">Všetko</button>
+            <button class="filter-btn" data-filter="lecture">Prednášky</button>
+            <button class="filter-btn" data-filter="exercise">Cvičenia</button>
+            <button class="filter-btn" data-filter="pe">Telesná kultúra</button>
+        </div>
+
+        <div id="filter-empty-message" class="empty-message" style="display: none;">
+            Pre zvolený filter sa nenachádzajú žiadne položky.
+        </div>
+
+        <div class="table-responsive">
+            <table class="schedule-table">
+                <thead>
+                <tr>
+                    <th>Deň</th>
+                    <th>7:00 - 7:50</th>
+                    <th>8:00 - 8:50</th>
+                    <th>9:00 - 9:50</th>
+                    <th>10:00 - 10:50</th>
+                    <th>11:00 - 11:50</th>
+                    <th>12:00 - 12:50</th>
+                    <th>13:00 - 13:50</th>
+                    <th>14:00 - 14:50</th>
+                    <th>15:00 - 15:50</th>
+                    <th>16:00 - 16:50</th>
+                    <th>17:00 - 17:50</th>
+                    <th>18:00 - 18:50</th>
+                    <th>19:00 - 19:50</th>
+                    <th>20:00 - 20:50</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr data-day="1">
+                    <th>Po</th>
+                    <td colspan="2">-</td>
+                    <td data-type="exercise">cpu-c<br>Operačné systémy</td>
+                    <td>-</td>
+                    <td data-type="exercise">c137<br>Webové technológie 1</td>
+                    <td>-</td>
+                    <td data-type="pe" colspan="2">pos<br>Telesná kultúra 5</td>
+                    <td colspan="7">-</td>
+                </tr>
+                <tr data-day="2">
+                    <th>Ut</th>
+                    <td>-</td>
+                    <td data-type="lecture" colspan="2">de300<br>Analýza a zložitosť algoritmov</td>
+                    <td data-type="lecture" colspan="2">cd150<br>Webové technológie 1</td>
+                    <td colspan="3">-</td>
+                    <td data-type="lecture" colspan="2">cd300<br>Softvérové inžinierstvo</td>
+                    <td data-type="exercise">cd300<br>Softvérové inžinierstvo</td>
+                    <td colspan="3">-</td>
+                </tr>
+                <tr data-day="3">
+                    <th>St</th>
+                    <td>-</td>
+                    <td data-type="lecture" colspan="2">cd300<br>Operačné systémy</td>
+                    <td data-type="lecture" colspan="2">bc150<br>Analýza a zložitosť algoritmov</td>
+                    <td>-</td>
+                    <td data-type="lecture" colspan="2">cd150<br>Webové technológie 1</td>
+                    <td>-</td>
+                    <td data-type="exercise" colspan="2">b619<br>Počítačové siete</td>
+                    <td colspan="3">-</td>
+                </tr>
+                <tr data-day="4">
+                    <th>Št</th>
+                    <td colspan="4">-</td>
+                    <td data-type="exercise">c137<br>Softvérové inžinierstvo</td>
+                    <td>-</td>
+                    <td data-type="lecture" colspan="2">cd300<br>Počítačové siete</td>
+                    <td colspan="6">-</td>
+                </tr>
+                <tr data-day="5">
+                    <th>Pi</th>
+                    <td>-</td>
+                    <td data-type="exercise" colspan="2">cd150<br>Analýza a zložitosť algoritmov</td>
+                    <td colspan="11">-</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="semester-progress-container">
+            <h2>Uplynutie semestra</h2>
+            <div class="progress-bar-bg">
+                <div id="semester-progress-bar" class="progress-bar-fill" style="width: 0%;"></div>
+            </div>
+            <p id="semester-progress-text">Načítavam stav semestra...</p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <address class="footer-contact">
+        Kontakt: <a href="mailto:xchodurm@stuba.sk">xchodurm@stuba.sk</a> | Tel: <a href="tel:+421900123456">+421 900 123 456</a>
+    </address>
+    <p>&copy; 2026 Miroslav Chodúr | <a href="../README.md">Zdroje a licencovanie</a></p>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
