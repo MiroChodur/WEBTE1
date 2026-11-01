@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Regular.woff2") format("woff2");
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter-Bold.woff2") format("woff2");
+    font-weight: 700; font-style: normal; font-display: swap;
+}
+:root {
+    --papier: #f6f2ea; --biela: #fffefb; --atrament: #2d2822; --hnedá: #3a322b;
+    --paprika: #9c5a42; --paprika-tm: #82472f; --ciara: #e4ddd0; --stredna: #7b7266;
+    --polievka: #b8943f; --polievka-bg: #faf4e3;
+    --hlavne: #9c5a42;
+    --sladke: #94606f; --sladke-bg: #f6eef0;
+    --mucne: #8a6d4d; --mucne-bg: #f4eee4;
+    --vegetarianske: #6b7f55; --vegetarianske-bg: #eef2e8;
+    --salat: #53807c; --salat-bg: #e9f1ef;
+}
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; min-height: 100vh; font-family: "Inter", Arial, sans-serif; background: var(--papier); color: var(--atrament); }
+body > main { flex: 1 0 auto; width: 100%; }
+
+.hlavicka { background: var(--hnedá); color: var(--papier); padding: 1.5rem 0 0; border-bottom: 3px solid var(--ciara); }
+.hlavicka h1 { font-size: clamp(1.4rem, 4vw, 2.2rem); font-weight: 700; margin: 0; }
+.podtitul { margin: .25rem 0 0; color: #d6cdbf; font-size: .95rem; }
+.navigacia { list-style: none; display: flex; gap: 1.5rem; margin: 1rem 0 0; padding: 0; }
+.navigacia a { display: block; padding: .5rem 0; color: #d6cdbf; text-decoration: none; border-bottom: 3px solid transparent; }
+.navigacia a:hover { color: var(--biela); }
+.navigacia a[aria-current] { color: var(--biela); border-bottom-color: var(--biela); }
+
+.ovladanie { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.ovladanie .btn-success { background: var(--hnedá); border-color: var(--hnedá); color: var(--biela); }
+.ovladanie .btn-success:hover { background: var(--atrament); border-color: var(--atrament); }
+.ovladanie .btn-outline-secondary { color: var(--hnedá); border-color: var(--hnedá); }
+.ovladanie .btn-outline-secondary:hover { background: var(--hnedá); color: var(--biela); }
+
+.dni { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.dni .btn { color: var(--hnedá); border-color: var(--ciara); background: var(--biela); }
+.dni .btn:hover { background: var(--ciara); color: var(--hnedá); }
+.dni .btn.active { background: var(--hnedá); border-color: var(--hnedá); color: var(--biela); }
+
+.filtre { margin-bottom: 1rem; }
+.filtre legend { font-size: .95rem; font-weight: 700; float: none; margin: 0 0 .25rem; }
+.filtre #filtre { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.filter-polozka { cursor: pointer; }
+.filter-polozka input { accent-color: var(--hnedá); margin-right: .25rem; }
+.stav { color: var(--stredna); }
+
+.karta { background: var(--biela); border: 1px solid var(--ciara); border-top: 3px solid var(--hnedá); border-radius: .35rem; padding: 1.25rem; height: 100%; box-shadow: 0 1px 4px rgba(58,50,43,.06); }
+.karta-hlavicka { margin-bottom: 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--ciara); }
+.karta-hlavicka h3 { font-size: 1.35rem; font-weight: 700; margin: 0 0 .25rem; }
+.adresa, .aktualizacia { display: block; margin: 0; font-size: .8rem; color: var(--stredna); }
+.zdroj-odkaz { display: inline-block; margin: .35rem 0; font-size: .85rem; font-weight: 700; color: var(--hnedá); text-decoration: underline; text-underline-offset: 3px; }
+.zdroj-odkaz:hover { background: var(--hnedá); color: var(--biela); text-decoration: none; }
+.karta-info { font-size: .85rem; font-weight: 700; margin: 0 0 1rem; padding: .5rem .75rem; border: 1px solid var(--polievka); border-radius: .25rem; background: var(--polievka-bg); }
+
+.den-blok { margin-bottom: 1.25rem; }
+.den-blok h4 { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--stredna); border-bottom: 1px solid var(--ciara); padding-bottom: .25rem; margin-bottom: .6rem; }
+
+/* Jedlo: farba podľa kategórie (--k = farba pruhu a štítku, --kbg = pozadie) */
+.jedlo { --k: var(--hlavne); --kbg: var(--biela); display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: .65rem .75rem; margin-bottom: .5rem; border: 1px solid var(--ciara); border-left: 4px solid var(--k); border-radius: .25rem; background: var(--kbg); }
+.jedlo-polievka { --k: var(--polievka); --kbg: var(--polievka-bg); }
+.jedlo-sladke { --k: var(--sladke); --kbg: var(--sladke-bg); }
+.jedlo-mucne { --k: var(--mucne); --kbg: var(--mucne-bg); }
+.jedlo-vegetarianske { --k: var(--vegetarianske); --kbg: var(--vegetarianske-bg); }
+.jedlo-salat { --k: var(--salat); --kbg: var(--salat-bg); }
+.jedlo-popis { display: flex; flex-direction: column; align-items: flex-start; gap: .25rem; min-width: 0; overflow-wrap: anywhere; }
+.jedlo-typ { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: .05rem .5rem; border-radius: 1rem; border: 1px solid var(--k); color: var(--k); background: var(--biela); }
+.jedlo-polievka .jedlo-typ { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: .05rem .5rem; border-radius: 1rem; border: 1px solid var(--k); color: var(--k); background: var(--biela); }
+.jedlo-nazov { font-size: .92rem; line-height: 1.35; }
+.cena { flex-shrink: 0; font-size: .85rem; font-weight: 700; white-space: nowrap; padding: .15rem .6rem; border: 1px solid var(--ciara); border-radius: .25rem; background: var(--biela); color: var(--atrament); }
+.sprava { color: var(--stredna); font-style: italic; margin: 0; padding: .5rem 0; }
+.sprava-chyba { color: var(--atrament); font-style: normal; border: 1px dashed var(--stredna); border-radius: .25rem; padding: .75rem; background: var(--papier); }
+
+.obsah-text { max-width: 820px; }
+.obsah-text h3 { font-size: 1.15rem; font-weight: 700; margin-top: 1.75rem; border-bottom: 2px solid var(--ciara); padding-bottom: .25rem; }
+.obsah-text li { margin-bottom: .35rem; }
+.obsah-text code { color: var(--atrament); background: var(--ciara); padding: 0 .3rem; border-radius: .2rem; }
+.obsah-text a { color: var(--hnedá); }
+
+.pata { background: var(--hnedá); margin-top: 3rem; min-height: 3rem; }
+
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 3px solid var(--polievka); outline-offset: 2px; }
+@media (max-width: 575.98px) { .dni .btn { flex: 1 1 45%; } }
